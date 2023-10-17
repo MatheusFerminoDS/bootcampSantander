@@ -1,0 +1,15 @@
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  var valorInicial = double.parse(stdin.readLineSync()!);
+  var taxaJuros = double.parse(stdin.readLineSync()!);
+  var periodo = int.parse(stdin.readLineSync()!);
+
+  var valorFinal = valorInicial * pow(1 + taxaJuros, periodo);
+
+  // Formata o valor final para duas casas decimais
+  var valorFinalFormatado = valorFinal.toStringAsFixed(2);
+
+  print("Valor final do investimento: R\$ $valorFinalFormatado");
+}
