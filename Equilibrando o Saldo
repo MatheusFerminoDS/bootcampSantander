@@ -1,0 +1,13 @@
+import 'dart:io';
+
+void main() {
+  double saldoAtual = double.parse(stdin.readLineSync()!);
+  double valorDeposito = double.parse(stdin.readLineSync()!);
+  double valorRetirada = double.parse(stdin.readLineSync()!);
+
+  // Calcula o saldo atualizado
+  double saldoAtualizado = saldoAtual + valorDeposito - valorRetirada;
+
+  // Imprime o saldo atualizado com uma casa decimal
+  print('Saldo atualizado na conta: ${saldoAtualizado.toStringAsFixed(1)}');
+}
